@@ -1,11 +1,21 @@
-import logo from './logo.svg';
+import { SnackbarProvider } from 'notistack';
+
 import './App.css';
+import Login from './pages/login/login';
+import Register from './pages/register/register';
 
 function App() {
+
   return (
-    <div className="App">
-      Starting App
-    </div>
+    <SnackbarProvider>
+      <>
+  <Register/>
+  {/* <Login/> */}
+  {/* <UseSnackBar/> */}
+
+  </>
+  </SnackbarProvider>
+
   );
 }
 

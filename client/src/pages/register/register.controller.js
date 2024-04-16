@@ -14,7 +14,7 @@ const isValid = (name, reg)=>{
 
     const {showSuccessSnackbar, showErrorSnackbar} = useSnackBar();
 
-    const URL = "https://localhost:3002/api/v1/users/register";
+    const URL = "http://localhost:3001/api/users/signup";
     const METHOD = "POST"
 
     const [name, setName] = useState("");
@@ -75,7 +75,7 @@ const isValid = (name, reg)=>{
        
         const payload = {name, email, password, confirmPassword}
      const {data, error} = await fetchAPI(URL, METHOD, payload);
-        // console.log(data)
+        console.log(data, error)
 
         
         if(!error){

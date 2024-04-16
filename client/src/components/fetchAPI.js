@@ -50,8 +50,8 @@
 
 
 const fetchAPI = async(url, method="GET", payload=null) => {
-  let data;
-  let error;
+  let data=[];
+  let error="";
 
   try {
     
